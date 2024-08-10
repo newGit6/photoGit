@@ -1,0 +1,424 @@
+.fade-message {
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}
+
+.fade-message.fade-out {
+  opacity: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px; /* Adjust the spacing between items */
+}
+
+.gallery-item {
+  flex: 1 1 calc(20% - 10px); /* 5 items per row */
+  box-sizing: border-box;
+  max-width: calc(20% - 10px); /* 5 items per row */
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  width: 450px;
+  height: 250px;
+  box-shadow: 10px 5px 5px 0;
+  transition: border 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.gallery-item:hover {
+  border: 8px solid #000000; /* Blue border on hover */
+  border-radius: 15px;
+  transform: rotate(8deg); /* Slight rotation */
+}
+
+.card-all {
+  background-color: #f2aa4c;
+}
+
+.container-allcards {
+  background-color: #141a46;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.gallery-item video {
+  height: 50vh;
+}
+
+@media (max-width: 1200px) {
+  .gallery-item {
+    flex: 1 1 calc(25% - 10px); /* 4 items per row on medium screens */
+    max-width: calc(25% - 10px);
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 10px); /* 3 items per row on small screens */
+    max-width: calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px); /* 2 items per row on very small screens */
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-item {
+    flex: 1 1 100%; /* 1 item per row on extra small screens */
+    max-width: 100%;
+  }
+}
+
+.titlevideos {
+  color: #ec8b5e;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem; /* Adjust size as needed */
+  text-align: center;
+  margin-bottom: 2rem; /* Adjust spacing as needed */
+  position: relative;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Keyframes for the shake effect */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* view of the id detailes */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+.gallery-th,
+.gallery-vs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery-th img,
+.gallery-vs video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(172, 171, 171, 0.22) 0px 15px 12px;
+  cursor: pointer;
+}
+
+.viewTitle {
+  color: #ec8b5e;
+  font-size: 35px;
+}
+
+.viewTitle span {
+  color: rgb(251, 8, 8);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gallery-vs video {
+  height: 300px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.gallery-th img:hover,
+.gallery-vs video:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-th,
+  .gallery-vs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .gallery-th img,
+  .gallery-vs video {
+    width: calc(33.333% - 10px);
+  }
+}
+
+.gallery-th img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.viewDetailes {
+  background-color: #141a46;
+}
+
+.btnView {
+  background-color: #000000;
+  height: 50px;
+  width: 40px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.backViewBtn {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: Baskerville, Baskerville Old Face, Garamond, Times New Roman,
+    serif;
+  text-decoration: none;
+  align-items: center;
+}
+.btnView:hover {
+  background-color: #f10606;
+}
+
+/* Ensure the modal overlay covers the entire viewport */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Higher z-index to be on top of other elements */
+}
+
+/* Style for the modal content */
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  background: #fff; /* white background for the modal content */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1060; /* Higher z-index to be on top of the overlay */
+  overflow: hidden; /* Ensures content fits within the modal */
+}
+
+/* Style for the close button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f10606;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the image and video fit within the modal */
+.modal-content img,
+.modal-content video {
+  max-width: 100%;
+  max-height: 50%;
+}
+
+/* ADD Page  */
+
+.addpage {
+  background-color: #141a46 !important;
+}
+
+.addCard {
+  background-color: #e2e2e2 !important;
+}
+
+.addtitle {
+  color: #2a1800 !important;
+  font-family: Rokkitt, serif;
+  font-size: 25px;
+  font-weight: 900 !important;
+  text-decoration: underline;
+}
+
+.upload-btn {
+  background-color: #333d79ff; /* Blue background color */
+  color: #faebefff; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  border-radius: 4px; /* Rounded corners */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for transform and background-color */
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.upload-btn:hover {
+  transform: scale(1.1); /* Scale up the button by 10% */
+  color: #000000;
+  background-color: #b39500; /* Darker blue background on hover */
+}
+
+/* updatePage css */
+
+/* Add this CSS to a file such as UpdatePage.css and import it into your component */
+
+.updateContainer {
+  background-color: #141a46; /* Light background color for better readability */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.containerpage {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formUpdate {
+  background-color: #e2e2e2 !important;
+  padding: 15px 10px 10px 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+  .form-control {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-control {
+    padding: 12px;
+  }
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+  background-color: #047005d7;
+  color: white;
+  gap: 10px;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.closeModel {
+  background-color: red;
+}
+
+/* CSS for the Update Button */
+.btn-update {
+  position: relative;
+  overflow: hidden;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.btn-update:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  color: #000000;
+  font-weight: 800;
+}
+
+.btn-update:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.btn-update:hover:before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.btn-update span {
+  position: relative;
+  z-index: 1;
+}
+
+.modelContent {
+  background-color: #adefd1ff !important; /* Mint background for the modal */
+  color: #00203fff !important; /* Sailor Blue text color in the modal */
+}
+
+.closeModel {
+  background-color: red !important;
+}

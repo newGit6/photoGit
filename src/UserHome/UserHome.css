@@ -1,0 +1,137 @@
+/* Center the search bar */
+/* Container styling */
+.containerasfluid {
+  padding: 0;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff; /* Adjust as needed */
+}
+
+.containeras {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-bar {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.clear-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4d4d;
+  color: white;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: #e60000;
+}
+
+/* Ensure results are properly styled */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-items {
+  border: 1px solid #ddd;
+  background-color: #e69a8dff;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.video-items:hover {
+  border: 5px solid black;
+}
+
+.video-items h3 {
+  color: #5f4b8bff;
+  font-size: 35px !important;
+  font-weight: 900;
+  font-style: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.video-items span {
+  color: rgb(0, 0, 0);
+}
+
+.select-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eaff00df;
+  color: white;
+  cursor: pointer;
+}
+
+.select-button:hover {
+  background-color: #12b300;
+}
+
+/* Style for video details */
+.video-details {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.video-details span {
+  color: black;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.video-details h2,
+p {
+  color: #000000;
+}
+
+.video-details img {
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.video-details video {
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Image and Video Sizes */
+.video-details img,
+.video-details video {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.video-details img {
+  max-height: 800px !important; /* Adjust as needed */
+}
+
+.video-details video {
+  max-height: 200px; /* Adjust as needed */
+}

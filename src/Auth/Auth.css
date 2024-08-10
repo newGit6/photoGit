@@ -1,0 +1,119 @@
+/* Auth.css */
+
+.loginContainer {
+  background-color: #000000;
+}
+
+.loginCard {
+  border: none;
+  background-color: #f9ebde;
+}
+
+.regCard {
+  padding: 40px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .regCard {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .regCard {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+.CRaccount {
+  color: green;
+}
+
+.linkTag {
+  text-decoration: none;
+  font-size: 16px;
+  margin: auto;
+}
+.CRaccount:hover {
+  text-decoration: underline;
+}
+
+form .form-control {
+  padding-left: 10px; /* Move text 10px to the left */
+}
+
+/* Auth.css */
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.is-invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.regContainer {
+  background-color: #000000;
+}
+
+.regCard {
+  border: none;
+  background-color: #f9ebde;
+}
+
+/* Auth.css */
+
+/* Remove borders from input fields */
+.form-control {
+  border: none;
+  border-bottom: 2px solid #0c7504; /* Bottom border line effect */
+  border-radius: 10; /* Remove border radius for a flat design */
+  box-shadow: none; /* Remove shadow for a cleaner look */
+  padding-left: 0; /* Align placeholder text to the left */
+  padding-right: 0; /* Align placeholder text to the left */
+}
+
+/* Add focus effect to the bottom border */
+.form-control:focus {
+  border-bottom: 2px solid #007bff; /* Change color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Style the placeholder text */
+::placeholder {
+  color: #6c757d; /* Light gray color for placeholder text */
+  opacity: 1; /* Ensure placeholder text is visible */
+}
+
+/* Style for invalid input fields */
+.is-invalid {
+  border-bottom: 2px solid #dc3545; /* Red color for errors */
+}
+
+/* Error message styling */
+.invalid-feedback {
+  display: block; /* Show error message */
+  color: #dc3545; /* Red color for error text */
+}
+.position-relative {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #000000; /* Color for the icon */
+  font-size: 1.2rem;
+}

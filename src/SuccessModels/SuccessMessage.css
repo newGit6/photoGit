@@ -1,0 +1,43 @@
+/* Define the keyframes for animation */
+@keyframes iconAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the icon */
+.icon-animation {
+  animation: iconAnimation 1s ease-in-out infinite;
+}
+
+/* Style the container for the success message */
+.success-message-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050; /* Ensure this is higher than other elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+/* Style the success card */
+.success-message-card {
+  background-color: #28a745; /* Bootstrap success color */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
