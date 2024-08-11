@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../images/logo.jpg";
 
 const UserNav = () => {
   const [userEmail, setUserEmail] = useState(null);
   const navigate = useNavigate();
-  const location = useLocation(); // Get current location
 
   useEffect(() => {
     // Retrieve user details from localStorage
@@ -23,11 +22,6 @@ const UserNav = () => {
 
     // Redirect to the login page
     navigate("/"); // Adjust the path as needed
-  };
-
-  // Determine the background color based on the current location
-  const getNavLinkClass = (path) => {
-    return location.pathname === path ? "nav-link active" : "nav-link";
   };
 
   return (

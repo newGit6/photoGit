@@ -25,7 +25,7 @@ const UpdatePage = () => {
     const fetchVideo = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4563/api/videos/${id}`
+          `https://photoshopbackend-079t.onrender.com/api/videos/${id}`
         );
         const videoData = response.data;
 
@@ -120,7 +120,7 @@ const UpdatePage = () => {
     formData.append("userID", userID);
 
     try {
-      await axios.put(`http://localhost:4563/api/videos/${id}`, formData, {
+      await axios.put(`https://photoshopbackend-079t.onrender.com/api/videos/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

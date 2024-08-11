@@ -123,15 +123,15 @@ p {
 .video-details img,
 .video-details video {
   max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto; 
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
 .video-details img {
-  max-height: 800px !important; /* Adjust as needed */
+  max-height: 800px !important; 
 }
 
 .video-details video {
-  max-height: 200px; /* Adjust as needed */
+  max-height: 200px; 
 }

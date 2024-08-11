@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaCheckCircle } from "react-icons/fa";
-import "./SuccessMessage.css"; // Import the CSS file
+import "./SuccessMessage.css"; 
 
 const SuccessMessage = ({ message, onDismiss }) => {
   useEffect(() => {

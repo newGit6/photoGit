@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./Auth.css"; // Custom CSS file
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import icons
+import "./Auth.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -10,7 +10,7 @@ const Login = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [apiError, setApiError] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -38,19 +38,17 @@ const Login = () => {
     if (isValid) {
       try {
         const response = await axios.post(
-          "http://localhost:4563/api/auth/login",
+          "https://photoshopbackend-q7jc.onrender.com/api/auth/login",
           { email, password }
         );
         console.log("Login Successful:", response.data);
 
-        // Extract token, user details, and role from the response
         const { token, user } = response.data;
 
         // Save JWT token and user details to localStorage
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
 
-        // Navigate based on user role
         if (user.role === "Photographer") {
           navigate("/home"); // Navigate to Photographer's home
         } else if (user.role === "user") {

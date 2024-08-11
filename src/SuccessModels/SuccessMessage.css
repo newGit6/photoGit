@@ -14,7 +14,6 @@
   }
 }
 
-/* Apply the animation to the icon */
 .icon-animation {
   animation: iconAnimation 1s ease-in-out infinite;
 }
@@ -25,7 +24,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1050; /* Ensure this is higher than other elements */
+  z-index: 1050; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +35,7 @@
 
 /* Style the success card */
 .success-message-card {
-  background-color: #28a745; /* Bootstrap success color */
+  background-color: #28a745; 
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;

@@ -48,7 +48,7 @@
 }
 
 form .form-control {
-  padding-left: 10px; /* Move text 10px to the left */
+  padding-left: 10px; 
 }
 
 /* Auth.css */
@@ -72,7 +72,6 @@ form .form-control {
 
 /* Auth.css */
 
-/* Remove borders from input fields */
 .form-control {
   border: none;
   border-bottom: 2px solid #0c7504; /* Bottom border line effect */
@@ -82,26 +81,23 @@ form .form-control {
   padding-right: 0; /* Align placeholder text to the left */
 }
 
-/* Add focus effect to the bottom border */
 .form-control:focus {
-  border-bottom: 2px solid #007bff; /* Change color on focus */
-  outline: none; /* Remove default outline */
+  border-bottom: 2px solid #007bff; 
+  outline: none; 
 }
 
-/* Style the placeholder text */
 ::placeholder {
-  color: #6c757d; /* Light gray color for placeholder text */
-  opacity: 1; /* Ensure placeholder text is visible */
+  color: #6c757d; 
+  opacity: 1; 
 }
 
-/* Style for invalid input fields */
 .is-invalid {
-  border-bottom: 2px solid #dc3545; /* Red color for errors */
+  border-bottom: 2px solid #dc3545; 
 }
 
 /* Error message styling */
 .invalid-feedback {
-  display: block; /* Show error message */
+  display: block; 
   color: #dc3545; /* Red color for error text */
 }
 .position-relative {
@@ -114,6 +110,6 @@ form .form-control {
   right: 10px;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #000000; /* Color for the icon */
+  color: #000000;
   font-size: 1.2rem;
 }

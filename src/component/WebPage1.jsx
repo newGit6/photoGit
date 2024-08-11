@@ -17,7 +17,9 @@ const WebPage1 = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get("http://localhost:4563/api/videos");
+        const response = await axios.get(
+          "https://photoshopbackend-079t.onrender.com/api/videos"
+        );
         const userID = JSON.parse(localStorage.getItem("user"))?.id;
         const filteredVideos = response.data.filter(
           (video) => video.userID === userID
@@ -36,7 +38,9 @@ const WebPage1 = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4563/api/videos/${id}`);
+      await axios.delete(
+        `https://photoshopbackend-079t.onrender.com/api/videos/${id}`
+      );
       setVideos(videos.filter((video) => video._id !== id));
       setShowConfirmDelete(false);
     } catch (err) {
@@ -107,7 +111,7 @@ const WebPage1 = () => {
                             {thumbnails.map((thumbnail, index) => (
                               <img
                                 key={index}
-                                src={`http://localhost:4563/uploads/${thumbnail}`}
+                                src={`https://photoshopbackend-079t.onrender.com/uploads/${thumbnail}`}
                                 alt={`thumbnail-${index}`}
                                 className="gallery-item"
                                 data-aos="zoom-in"
@@ -130,7 +134,7 @@ const WebPage1 = () => {
                               <video
                                 key={index}
                                 controls
-                                src={`http://localhost:4563/uploads/${videoFile}`}
+                                src={`https://photoshopbackend-079t.onrender.com/uploads/${videoFile}`}
                                 className="gallery-item"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"

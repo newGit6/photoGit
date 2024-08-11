@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import confetti from "canvas-confetti"; // Import confetti
-import "./Auth.css"; // Custom CSS file
+import confetti from "canvas-confetti";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import icons
+import "./Auth.css";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
@@ -11,6 +12,8 @@ const Registration = () => {
   const [role, setRole] = useState("");
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -53,7 +56,7 @@ const Registration = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await axios.post(
-          "http://localhost:4563/api/auth/register",
+          "https://photoshopbackend-079t.onrender.com/api/auth/register",
           {
             email,
             password,
@@ -70,13 +73,13 @@ const Registration = () => {
         // Store success message in localStorage
         localStorage.setItem("successMessage", "Registration successful!");
 
-        // Navigate to home after 30 seconds
+        // Navigate to home after 4 seconds
         setTimeout(() => {
           navigate("/");
 
           // Clear local storage message after navigating
           localStorage.removeItem("successMessage");
-        }, 4000); // 30 seconds
+        }, 4000); // 4 seconds
 
         // Reset form and errors
         setErrors({});
@@ -135,12 +138,12 @@ const Registration = () => {
                     <div className="invalid-feedback">{errors.email}</div>
                   )}
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 position-relative">
                   <label htmlFor="password" className="form-label">
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={passwordVisible ? "text" : "password"}
                     className={`form-control ${
                       errors.password ? "is-invalid" : ""
                     }`}
@@ -148,16 +151,24 @@ const Registration = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary position-absolute top-51 end-0 translate-middle-y"
+                    style={{ marginTop: "-18px" }}
+                    onClick={() => setPasswordVisible(!passwordVisible)}
+                  >
+                    {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+                  </button>
                   {errors.password && (
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
                 </div>
-                <div className="mb-3">
+                <div className="mb-3 position-relative">
                   <label htmlFor="confirmPassword" className="form-label">
                     Confirm Password
                   </label>
                   <input
-                    type="password"
+                    type={confirmPasswordVisible ? "text" : "password"}
                     className={`form-control ${
                       errors.confirmPassword ? "is-invalid" : ""
                     }`}
@@ -165,6 +176,16 @@ const Registration = () => {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                   />
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary position-absolute top-51 end-0 translate-middle-y"
+                    style={{ marginTop: "-18px" }}
+                    onClick={() =>
+                      setConfirmPasswordVisible(!confirmPasswordVisible)
+                    }
+                  >
+                    {confirmPasswordVisible ? <FaEyeSlash /> : <FaEye />}
+                  </button>
                   {errors.confirmPassword && (
                     <div className="invalid-feedback">
                       {errors.confirmPassword}

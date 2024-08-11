@@ -1,23 +1,23 @@
 /* Homepage.css */
 .text-container {
-  display: flex; /* Use flexbox for centering */
-  flex-direction: column; /* Align items vertically */
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  color: #fff; /* Optional: Make sure the text is readable */
-  text-align: center; /* Center the text horizontally */
-  padding: 50px; /* Add some padding for spacing around the text */
-  min-height: 85.5vh; /* Ensure the container takes up the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  min-height: 85.5vh;
   background-color: #141a46;
   width: 100%;
 }
 
 .typing-effect {
-  overflow: hidden; /* Ensures that the text is hidden until it's revealed */
-  white-space: nowrap; /* Prevents the text from wrapping */
-  border-right: 0.15em solid orange; /* Adds a blinking cursor effect */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid orange;
   animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
-  display: inline-block; /* Ensures the text occupies only as much width as necessary */
+  display: inline-block;
 }
 
 @keyframes typing {
@@ -51,57 +51,57 @@
 }
 
 .typing-effect {
-  font-size: 1rem; /* Default font size */
+  font-size: 1rem;
 }
 
 .capture {
-  font-size: 50px; /* Default font size */
+  font-size: 50px;
 }
 
 /* Styles for screens smaller than 576px (phones in portrait mode) */
 @media (max-width: 575.98px) {
   .text-container {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px;
     width: 100%;
     min-height: 85.5vh;
   }
 
   .typing-effect {
-    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    font-size: 0.8rem;
   }
 
   .capture {
-    font-size: 30px; /* Adjust font size for smaller screens */
+    font-size: 30px;
   }
 }
 
 /* Styles for screens between 576px and 767.98px (phones in landscape mode, small tablets) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .text-container {
-    padding: 30px; /* Adjust padding for medium screens */
+    padding: 30px;
     width: 100%;
     min-height: 85.5vh;
   }
 
   .typing-effect {
-    font-size: 0.9rem; /* Adjust font size for medium screens */
+    font-size: 0.9rem;
   }
 
   .capture {
-    font-size: 40px; /* Adjust font size for medium screens */
+    font-size: 40px;
   }
 }
 
 /* Styles for screens between 768px and 991.98px (tablets, small desktops) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .text-container {
-    padding: 40px; /* Adjust padding for larger screens */
+    padding: 40px;
     width: 100%;
     min-height: 85.5vh;
   }
 
   .typing-effect {
-    font-size: 1rem; /* Adjust font size for larger screens */
+    font-size: 1rem;
   }
 
   .capture {
@@ -112,17 +112,17 @@
 /* Styles for screens 992px and wider (large desktops) */
 @media (min-width: 992px) {
   .text-container {
-    padding: 50px; /* Default padding */
+    padding: 50px;
     width: 100%;
     min-height: 85.5vh;
   }
 
   .typing-effect {
-    font-size: 1.1rem; /* Increase font size for larger screens */
+    font-size: 1.1rem;
   }
 
   .capture {
-    font-size: 50px; /* Default font size */
+    font-size: 50px; 
   }
 }
 
@@ -131,7 +131,7 @@
   overflow: hidden;
   padding: 10px 20px;
   border: none;
-  background-color: #007bff; /* Primary button color */
+  background-color: #007bff; 
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -147,7 +147,7 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(166, 122, 197, 0.2); /* Semi-transparent background color */
+  background: rgba(166, 122, 197, 0.2); 
   transition: transform 0.4s;
   transform: translate(-50%, -50%) scale(0);
   border-radius: 50%;
@@ -170,7 +170,7 @@
 .btn-grow {
   padding: 10px 20px;
   border: none;
-  background-color: #b7d91e; /* Primary button color */
+  background-color: #b7d91e; 
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -180,5 +180,5 @@
 }
 
 .btn-grow:hover {
-  color: #fff; /* Optional: Change text color on hover */
+  color: #fff; 
 }

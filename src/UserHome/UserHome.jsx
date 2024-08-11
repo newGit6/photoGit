@@ -17,7 +17,7 @@ const UserHome = () => {
     }
 
     try {
-      const response = await axios.get("http://localhost:4563/api/videos", {
+      const response = await axios.get("https://photoshopbackend-079t.onrender.com/api/videos", {
         params: { title: query },
       });
 
@@ -46,7 +46,7 @@ const UserHome = () => {
   const handleSelectVideo = async (videoId) => {
     try {
       const response = await axios.get(
-        `http://localhost:4563/api/videos/${videoId}`
+        `https://photoshopbackend-079t.onrender.com/api/videos/${videoId}`
       );
       setSelectedVideo(response.data);
     } catch (error) {
@@ -119,7 +119,7 @@ const UserHome = () => {
                   {selectedVideo.thumbnails.map((thumbnail, index) => (
                     <li key={index}>
                       <img
-                        src={`http://localhost:4563/uploads/${thumbnail}`}
+                        src={`https://photoshopbackend-079t.onrender.com/uploads/${thumbnail}`}
                         alt={`Thumbnail ${index}`}
                         width="100"
                       />
@@ -134,7 +134,7 @@ const UserHome = () => {
                     <li key={index}>
                       <video
                         controls
-                        src={`http://localhost:4563/uploads/${video}`}
+                        src={`https://photoshopbackend-079t.onrender.com/uploads/${video}`}
                         width="320"
                       >
                         Your browser does not support the video tag.
