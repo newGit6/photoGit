@@ -24,7 +24,7 @@ const AddPage = () => {
   const videosInputRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); 
+    AOS.init({ duration: 1000 });
   }, []);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const AddPage = () => {
 
     try {
       const response = await axios.post(
-        "https://photoshopbackend-079t.onrender.com/api/upload",
+        "https://photoshopbackend-q7jc.onrender.com/api/upload",
         formData,
         {
           headers: {

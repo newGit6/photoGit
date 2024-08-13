@@ -17,9 +17,12 @@ const UserHome = () => {
     }
 
     try {
-      const response = await axios.get("https://photoshopbackend-079t.onrender.com/api/videos", {
-        params: { title: query },
-      });
+      const response = await axios.get(
+        "https://photoshopbackend-q7jc.onrender.com/api/videos",
+        {
+          params: { title: query },
+        }
+      );
 
       // Filter videos to only include those whose titles start with the search query
       const filteredVideos = response.data.filter((video) =>
@@ -46,7 +49,7 @@ const UserHome = () => {
   const handleSelectVideo = async (videoId) => {
     try {
       const response = await axios.get(
-        `https://photoshopbackend-079t.onrender.com/api/videos/${videoId}`
+        `https://photoshopbackend-q7jc.onrender.com/api/videos/${videoId}`
       );
       setSelectedVideo(response.data);
     } catch (error) {
@@ -119,7 +122,7 @@ const UserHome = () => {
                   {selectedVideo.thumbnails.map((thumbnail, index) => (
                     <li key={index}>
                       <img
-                        src={`https://photoshopbackend-079t.onrender.com/uploads/${thumbnail}`}
+                        src={`https://photoshopbackend-q7jc.onrender.com/uploads/${thumbnail}`}
                         alt={`Thumbnail ${index}`}
                         width="100"
                       />
@@ -134,7 +137,7 @@ const UserHome = () => {
                     <li key={index}>
                       <video
                         controls
-                        src={`https://photoshopbackend-079t.onrender.com/uploads/${video}`}
+                        src={`https://photoshopbackend-q7jc.onrender.com/${video}`}
                         width="320"
                       >
                         Your browser does not support the video tag.

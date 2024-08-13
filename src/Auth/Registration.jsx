@@ -56,7 +56,7 @@ const Registration = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         const response = await axios.post(
-          "https://photoshopbackend-079t.onrender.com/api/auth/register",
+          "https://photoshopbackend-q7jc.onrender.com/api/auth/register",
           {
             email,
             password,

@@ -23,14 +23,14 @@ const VideoDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); 
+    AOS.init({ duration: 1000 });
   }, []);
 
   useEffect(() => {
     const fetchVideo = async () => {
       try {
         const response = await axios.get(
-          `https://photoshopbackend-079t.onrender.com/api/videos/${id}`
+          `https://photoshopbackend-q7jc.onrender.com/api/videos/${id}`
         );
         setVideo(response.data);
       } catch (err) {
@@ -56,7 +56,9 @@ const VideoDetail = () => {
   // Delete functions
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://photoshopbackend-079t.onrender.com/api/videos/${id}`);
+      await axios.delete(
+        `https://photoshopbackend-q7jc.onrender.com/api/videos/${id}`
+      );
       setVideo(null); // Assuming you want to clear the video details on successful delete
       navigate("/webpage1");
       setShowConfirmDelete(false);
@@ -115,14 +117,14 @@ const VideoDetail = () => {
                 {video.thumbnails.map((thumbnail, index) => (
                   <img
                     key={index}
-                    src={`https://photoshopbackend-079t.onrender.com/uploads/${thumbnail}`}
+                    src={`https://photoshopbackend-q7jc.onrender.com/uploads/${thumbnail}`}
                     alt={`Thumbnail ${index}`}
                     className="gallery-img"
                     data-aos="fade-right"
                     data-aos-duration="3000"
                     onClick={() =>
                       handleOpenModal(
-                        `https://photoshopbackend-079t.onrender.com/uploads/${thumbnail}`
+                        `https://photoshopbackend-q7jc.onrender.com/uploads/${thumbnail}`
                       )
                     }
                   />
@@ -133,13 +135,13 @@ const VideoDetail = () => {
                   <video
                     key={index}
                     controls
-                    src={`https://photoshopbackend-079t.onrender.com/uploads/${videoFile}`}
+                    src={`https://photoshopbackend-q7jc.onrender.com/uploads/${videoFile}`}
                     className="gallery-video"
                     data-aos="fade-left"
                     data-aos-duration="3000"
                     onClick={() =>
                       handleOpenModal(
-                        `https://photoshopbackend-079t.onrender.com/uploads/${videoFile}`
+                        `https://photoshopbackend-q7jc.onrender.com/uploads/${videoFile}`
                       )
                     }
                   >

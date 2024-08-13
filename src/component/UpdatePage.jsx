@@ -25,7 +25,7 @@ const UpdatePage = () => {
     const fetchVideo = async () => {
       try {
         const response = await axios.get(
-          `https://photoshopbackend-079t.onrender.com/api/videos/${id}`
+          `https://photoshopbackend-q7jc.onrender.com/api/videos/${id}`
         );
         const videoData = response.data;
 
@@ -120,11 +120,15 @@ const UpdatePage = () => {
     formData.append("userID", userID);
 
     try {
-      await axios.put(`https://photoshopbackend-079t.onrender.com/api/videos/${id}`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await axios.put(
+        `https://photoshopbackend-q7jc.onrender.com/api/videos/${id}`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       setSuccess("Video updated successfully!");
       setTimeout(() => {
         navigate(`/video/${id}`);
