@@ -48,7 +48,7 @@
 }
 
 form .form-control {
-  padding-left: 10px; 
+  padding-left: 10px;
 }
 
 /* Auth.css */
@@ -82,22 +82,22 @@ form .form-control {
 }
 
 .form-control:focus {
-  border-bottom: 2px solid #007bff; 
-  outline: none; 
+  border-bottom: 2px solid #007bff;
+  outline: none;
 }
 
 ::placeholder {
-  color: #6c757d; 
-  opacity: 1; 
+  color: #6c757d;
+  opacity: 1;
 }
 
 .is-invalid {
-  border-bottom: 2px solid #dc3545; 
+  border-bottom: 2px solid #dc3545;
 }
 
 /* Error message styling */
 .invalid-feedback {
-  display: block; 
+  display: block;
   color: #dc3545; /* Red color for error text */
 }
 .position-relative {
@@ -112,4 +112,41 @@ form .form-control {
   cursor: pointer;
   color: #000000;
   font-size: 1.2rem;
+}
+
+/* Auth.css */
+
+/* Register button special effect */
+.reg {
+  background-color: #ff7300;
+  color: #fff;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.reg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00ffe5, #00d4ff, #709bca);
+  z-index: -1;
+  transition: transform 0.4s;
+  transform: scale(0);
+  border-radius: 50%;
+}
+
+.reg:hover::before {
+  transform: scale(1);
+}
+
+.reg:hover {
+  color: #000000;
+  background-color: #fff;
+  font-weight: 400;
 }

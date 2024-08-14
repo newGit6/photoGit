@@ -1,10 +1,8 @@
-/* Center the search bar */
 /* Container styling */
 .containerasfluid {
   padding: 0;
   width: 100%;
   height: auto;
-  background-color: #ffffff; /* Adjust as needed */
 }
 
 .containeras {
@@ -94,6 +92,7 @@
 .video-details {
   margin-top: 16px;
   text-align: center;
+  background-color: #141a46;
 }
 
 .video-details span {
@@ -119,19 +118,32 @@ p {
   border-radius: 5px;
 }
 
+/* Flexbox for inline display */
+.video-details ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.video-details ul li {
+  list-style-type: none;
+  margin: 10px;
+  flex-basis: calc(20% - 20px); /* Adjust width to ensure 5 items per row */
+  max-width: 20%; /* Ensure items don't exceed 20% of the container width */
+}
+
 /* Image and Video Sizes */
 .video-details img,
 .video-details video {
-  max-width: 100%;
-  height: auto; 
   border: 1px solid #ddd;
   border-radius: 4px;
+  margin-right: 10px; /* Optional: Add space between items */
 }
 
-.video-details img {
-  max-height: 800px !important; 
-}
-
-.video-details video {
-  max-height: 200px; 
+@media (max-width: 768px) {
+  .video-details img,
+  .video-details video {
+    width: 80px; /* Smaller width on smaller screens */
+  }
 }

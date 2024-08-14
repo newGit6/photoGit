@@ -117,7 +117,7 @@ const Login = () => {
                     <div className="invalid-feedback">{passwordError}</div>
                   )}
                 </div>
-                <button type="submit" className="btn btn-primary w-100">
+                <button type="submit" className="btn reg w-100">
                   Login
                 </button>
               </form>

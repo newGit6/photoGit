@@ -66,88 +66,107 @@ const UserHome = () => {
   return (
     <>
       <UserNav />
-      <div className="container-fluid containerasfluid">
-        <div className="container containeras">
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search by Title..."
-              className="search-bar"
-              value={searchQuery}
-              onChange={handleSearchChange}
-            />
-            {searchQuery && (
-              <button className="clear-button" onClick={handleClearSearch}>
-                Clear
-              </button>
-            )}
-          </div>
-
-          <div className="results-container">
-            {videos.length > 0 ? (
-              videos.map((video) => (
-                <div key={video._id} className="video-items">
-                  <h3 style={{ fontSize: "25px" }}>
-                    {" "}
-                    Title: <span>{video.title}</span>{" "}
-                  </h3>
-                  <button
-                    className="select-button"
-                    onClick={() => handleSelectVideo(video._id)}
-                  >
-                    View Details
-                  </button>
-                </div>
-              ))
-            ) : (
-              <p>No videos found.</p>
-            )}
-          </div>
-
-          {selectedVideo && (
-            <div className="video-details">
-              <h2>
-                {" "}
-                <span>Title Name: </span>
-                {selectedVideo.title}
-              </h2>
-              <p style={{ fontSize: "20px" }}>
-                {" "}
-                <span>Description: </span>
-                {selectedVideo.description}
-              </p>
-              <div>
-                <strong>Images:</strong>
-                <ul style={{ listStyleType: "none" }}>
-                  {selectedVideo.thumbnails.map((thumbnail, index) => (
-                    <li key={index}>
-                      <img
-                        src={`https://photoshopbackend-q7jc.onrender.com/uploads/${thumbnail}`}
-                        alt={`Thumbnail ${index}`}
-                        width="100"
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <strong>Videos:</strong>
-                <ul style={{ listStyleType: "none" }}>
-                  {selectedVideo.videos.map((video, index) => (
-                    <li key={index}>
-                      <video
-                        controls
-                        src={`https://photoshopbackend-q7jc.onrender.com/${video}`}
-                        width="320"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      <div
+        className="bodyResponsove"
+        style={{
+          width: "100%",
+          height: "100%",
+          backgroundColor: " #141a46",
+        }}
+      >
+        <div className="container-fluid containerasfluid">
+          <div className="container containeras">
+            <div className="search-container">
+              <input
+                type="text"
+                placeholder="Search by Title..."
+                className="search-bar"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+              {searchQuery && (
+                <button className="clear-button" onClick={handleClearSearch}>
+                  Clear
+                </button>
+              )}
             </div>
-          )}
+
+            <div className="results-container">
+              {videos.length > 0 ? (
+                videos.map((video) => (
+                  <div key={video._id} className="video-items">
+                    <h3 style={{ fontSize: "25px" }}>
+                      {" "}
+                      Title: <span>{video.title}</span>{" "}
+                    </h3>
+                    <button
+                      className="select-button"
+                      onClick={() => handleSelectVideo(video._id)}
+                    >
+                      View Details
+                    </button>
+                  </div>
+                ))
+              ) : (
+                <p>No videos found.</p>
+              )}
+            </div>
+
+            {selectedVideo && (
+              <div className="video-details">
+                <h2>
+                  {" "}
+                  <span>Title Name: </span>
+                  {selectedVideo.title}
+                </h2>
+                <p style={{ fontSize: "20px" }}>
+                  {" "}
+                  <span>Description: </span>
+                  {selectedVideo.description}
+                </p>
+                <div>
+                  <strong>Images:</strong>
+                  <ul style={{ listStyleType: "none" }}>
+                    {selectedVideo.thumbnails.map((thumbnail, index) => (
+                      <li key={index}>
+                        <img
+                          src={`https://photoshopbackend-q7jc.onrender.com/uploads/${thumbnail}`}
+                          alt={`Thumbnail ${index}`}
+                          width="100"
+                          style={{
+                            width: "200px",
+                            height: "100px",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <strong>Videos:</strong>
+                  <ul style={{ listStyleType: "none" }}>
+                    {selectedVideo.videos.map((video, index) => (
+                      <li key={index}>
+                        <video
+                          controls
+                          src={`https://photoshopbackend-q7jc.onrender.com/uploads/${video}`}
+                          width="320"
+                          style={{
+                            width: "280px",
+                            height: "150px",
+                            objectFit: "cover",
+                          }}
+                        >
+                          Your browser does not support the video tag.
+                        </video>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

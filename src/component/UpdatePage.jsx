@@ -120,15 +120,11 @@ const UpdatePage = () => {
     formData.append("userID", userID);
 
     try {
-      await axios.put(
-        `https://photoshopbackend-q7jc.onrender.com/api/videos/${id}`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      await axios.put(`http://localhost:4563/api/videos/${id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       setSuccess("Video updated successfully!");
       setTimeout(() => {
         navigate(`/video/${id}`);

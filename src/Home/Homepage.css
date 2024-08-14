@@ -18,6 +18,7 @@
   border-right: 0.15em solid orange;
   animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
   display: inline-block;
+  color: rgb(255, 255, 255);
 }
 
 @keyframes typing {
@@ -122,7 +123,7 @@
   }
 
   .capture {
-    font-size: 50px; 
+    font-size: 50px;
   }
 }
 
@@ -131,7 +132,7 @@
   overflow: hidden;
   padding: 10px 20px;
   border: none;
-  background-color: #007bff; 
+  background-color: #007bff;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -147,7 +148,7 @@
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(166, 122, 197, 0.2); 
+  background: rgba(166, 122, 197, 0.2);
   transition: transform 0.4s;
   transform: translate(-50%, -50%) scale(0);
   border-radius: 50%;
@@ -170,7 +171,7 @@
 .btn-grow {
   padding: 10px 20px;
   border: none;
-  background-color: #b7d91e; 
+  background-color: #b7d91e;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -180,5 +181,5 @@
 }
 
 .btn-grow:hover {
-  color: #fff; 
+  color: #fff;
 }
