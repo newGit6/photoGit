@@ -75,17 +75,22 @@ const WebPage1 = () => {
       <div className="container mt-5">
         <h1 className="text-center mb-4 titlevideos">photo gallery</h1>
         {videos.length === 0 ? (
-          <p
-            className="text-center"
-            style={{
-              height: "487.9px",
-              color: "white",
-              fontSize: "20px",
-              fontWeight: "600",
-            }}
-          >
-            No videos available.
-          </p>
+          <>
+            <p
+              className="text-center"
+              style={{
+                height: "487.9px",
+                color: "white",
+                fontSize: "20px",
+                fontWeight: "600",
+              }}
+            >
+              No videos available.
+            </p>
+            <p className="text-center" style={{ height: "85px" }}>
+              No videos available.
+            </p>
+          </>
         ) : (
           <div className="row gallery-grid">
             {videos.map((video) => {
